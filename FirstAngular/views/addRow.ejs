@@ -1,0 +1,32 @@
+<% include partials/header%>
+
+        <td class="leftMenu">
+            <a href="/">Home</a><br>
+            <a href="/about">About</a><br>
+            <a href="/displayBooks">Display</a><br>
+            <a href="/deleteRow">Delete</a><br>
+            <a href="/editAndUpdate">EditAndUpdate</a>
+        </td>
+        <td class="mainContent">
+            <h3>Form to add record to database</h3>
+    <form method="POST" action="insert">
+    <label>BookName:</label><br>
+    <input type="text" name="bookName"/>
+    <br>
+    <label>Isbn:</label><br>
+    <input type="number" name="isbn"/>
+    <br>
+    <label>Author:</label><br>
+    <input type="text" name="author"/>
+    <br>
+    <label>PublishedYear:</label><br>
+    <input type="number" name="publishedYear"/>
+    <br><br>
+    <input type="submit" value="Add"/>
+</form>
+
+
+        </td>
+    </tr>
+
+<% include partials/footer%>

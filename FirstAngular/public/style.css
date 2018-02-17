@@ -1,0 +1,38 @@
+#isbnInFinalUpdate{
+    border: 0px;
+    margin: 0px;
+}
+
+.header {
+    width: 800px;
+    height: 80px;
+    text-align: center;
+    vertical-align: center;
+    background-color: #F8F8FF;
+    border: 3px;
+    border-color: blue;
+}
+
+.footer {
+    background-color: #F8F8FF;
+    text-align: center;
+    vertical-align: center;
+    border: 3px;
+    border-color: blue;
+}
+
+.leftMenu {
+    height: 500px;
+    background-color: #D8D8D8;
+    vertical-align: middle;
+    text-align: center;
+    width: 150px;
+    border: 3px;
+    border-color: blue;
+}
+
+.mainContent {
+    height: 500px;
+    background-color: #E6E6E6;
+    width: 650px;
+}

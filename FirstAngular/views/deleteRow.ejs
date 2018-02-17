@@ -1,0 +1,42 @@
+<% include partials/header%>
+
+    <tr>
+        <td class="leftMenu">
+            <a href="/">Home</a><br>
+            <a href="/about">About</a><br>
+            <a href="/displayBooks">Display</a><br>
+            <a href="/addRow">Add</a><br>
+            <a href="/editAndUpdate">EditAndUpdate</a>
+        </td>
+        <td class="mainContent">
+<h1>List Of Books:</h1>
+
+<table>
+    <thead>
+    <th>BookName</th>
+    <th>Isbn</th>
+    <th>Author</th>
+    <th>PublishedYear</th>
+    </thead>
+    <tbody>
+    <% items.forEach(function(item) { %>
+    <tr>
+        <td><%=item.bookName%></td>
+        <td><%=item.isbn %></td>
+        <td><%=item.author %></td>
+        <td><%=item.publishedYear %></td>
+    </tr>
+    <% } )%>
+    </tbody>
+</table>
+<br><br><br>
+<form method="POST" action="/remove" >
+    <label>Isbn:</label>
+    <input type="text" name="isbn"/>
+    <br><br>
+    <input type="submit" value="Remove"/>
+</form>
+        </td>
+    </tr>
+
+<% include partials/footer%>

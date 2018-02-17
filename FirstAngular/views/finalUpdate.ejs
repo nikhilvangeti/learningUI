@@ -1,0 +1,32 @@
+<% include partials/header%>
+
+    <tr>
+        <td class="leftMenu">
+            <a href="/">Home</a><br>
+            <a href="/about">About</a><br>
+            <a href="/addRow">Add</a><br>
+            <a href="/deleteRow">Delete</a><br>
+            <a href="/displayBooks">Display</a>
+        </td>
+        <td class="mainContent">
+<% items.forEach(function(item) { %>
+<form method="POST" action="save">
+    <h1>Update View for <input id='isbnInFinalUpdate' type="text" name="isbn" value="<%=item.isbn%>"/></h1>
+    <br><br>
+    <label>BookName:</label><br>
+    <input type="text" name="bookName" value="<%=item.bookName%>"/>
+    <br>
+    <label>Author:</label><br>
+    <input type="text" name="author" value="<%=item.author%>"/>
+    <br>
+    <label>publishedYear:</label><br>
+    <input type="number" name="publishedYear" value="<%=item.publishedYear%>"/>
+    <br><br>
+    <input type="submit" value="update"/>
+</form>
+
+<%})%>
+        </td>
+    </tr>
+
+<% include partials/footer%>
